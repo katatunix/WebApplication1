@@ -7,7 +7,7 @@ let main args =
     let builder = WebApplication.CreateBuilder(args)
     let app = builder.Build()
 
-    app.MapGet("/", Func<string>(fun () -> $"Hello World! {DateTime.Now}")) |> ignore
+    app.MapGet("/", Func<string>(fun () -> $"Current time is {DateTime.Now}")) |> ignore
 
     app.Run()
 
